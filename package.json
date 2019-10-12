@@ -1,0 +1,16 @@
+{
+  "name": "node-db-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Brandon-Pampuch/node-db-challenge.git",
+  "author": "Brandon_Pampuch <brandonpampuch@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "knex": "^0.19.5",
+    "nodemon": "^1.19.3",
+    "pg": "^7.12.1",
+    "sqlite3": "^4.1.0"
+  }
+}
