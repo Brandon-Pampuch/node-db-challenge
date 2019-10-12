@@ -8,6 +8,9 @@ const db = require('./tasks-model')
 router.get('/', (req, res) => {
     db.find()
         .then(tasks => {
+            tasks.forEach(task => {
+                task.completed = tasks.completed ? true : false
+            })
             res.json(tasks)
         })
         .catch(err => {
