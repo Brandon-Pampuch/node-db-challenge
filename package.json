@@ -2,6 +2,9 @@
   "name": "node-db-challenge",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
   "repository": "https://github.com/Brandon-Pampuch/node-db-challenge.git",
   "author": "Brandon_Pampuch <brandonpampuch@gmail.com>",
   "license": "MIT",
