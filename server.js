@@ -6,6 +6,8 @@ const resourcesRouter = require('./router/resourcesRouter/resourcesRouter')
 const server = express()
 server.use(express.json())
 
+//routes for all resources start with '/' for post and get
+
 server.use('/api/projects', projectsRouter)
 server.use('/api/tasks', tasksRouter)
 server.use('/api/resources', resourcesRouter)

@@ -33,6 +33,8 @@ exports.up = function (knex) {
                 .notNullable()
                 .references('id')
                 .inTable('projects')
+                .onUpdate("CASCADE")
+                .onDelete("RESTRICT")
             table.integer('resource_id')
                 .unsigned()
                 .notNullable()

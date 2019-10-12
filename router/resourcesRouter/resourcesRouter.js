@@ -17,6 +17,22 @@ router.get('/', (req, res) => {
             })
         })
 })
+router.get('/:id', (req, res) => {
+    db.getResourcesByProject(req.params.id)
+        .then(resources => {
+            res.json(resources)
+        })
+        .catch(err => {
+            res.json({
+                error: err,
+                message: "could not find resources"
+            })
+        })
+})
+
+//get resources by project ID
+
+
 router.post('/', (req, res) => {
     db.add(req.body)
         .then(resources => {
