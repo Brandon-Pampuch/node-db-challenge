@@ -17,5 +17,17 @@ router.get('/', (req, res) => {
             })
         })
 })
+router.post('/', (req, res) => {
+    db.add(req.body)
+        .then(resources => {
+            res.json(resources)
+        })
+        .catch(err => {
+            res.json({
+                error: err,
+                message: "could not add resource"
+            })
+        })
+})
 
 module.exports = router 

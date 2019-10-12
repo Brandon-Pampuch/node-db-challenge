@@ -17,5 +17,18 @@ router.get('/', (req, res) => {
             })
         })
 })
+router.post('/', (req, res) => {
+    db.add(req.body)
+        .then(tasks => {
+            res.json(tasks)
+        })
+        .catch(err => {
+            res.json({
+                error: err,
+                message: "could not add task"
+            })
+        })
+})
+
 
 module.exports = router 
